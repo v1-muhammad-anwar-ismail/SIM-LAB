@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PHP](https://img.shields.io/badge/php-v8.5.4-purple.svg)
 ![Laravel](https://img.shields.io/badge/laravel-v11.x-red.svg)
-![MySQL](https://img.shields.io/badge/database-MySQL-blue.svg)
+![PostgresSQL](https://img.shields.io/badge/database-PostgresSQL-blue.svg)
 
 ## Deskripsi
 
@@ -54,7 +54,7 @@
 
 - **Backend**: PHP, Laravel 11
 - **Frontend**: Blade Templating, Custom CSS (Cyberpunk Aesthetic)
-- **Database**: MySQL
+- **Database**: PostgresSQL
 - **Dependencies Tambahan**: SweetAlert2 (Notifikasi), Toastify JS
 - **Authentication**: Laravel Session & Google OAuth (SSO)
 
@@ -100,9 +100,9 @@ APP_NAME="SIM-LAB UNESA"
 APP_ENV=local
 APP_URL=http://localhost:8000
 
-DB_CONNECTION=mysql
+DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
-DB_PORT=3306
+DB_PORT=5432
 DB_DATABASE=simlab_db
 DB_USERNAME=root
 DB_PASSWORD=
