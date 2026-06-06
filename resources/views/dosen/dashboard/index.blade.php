@@ -64,6 +64,14 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Grid Sistem Sementara */
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
     /* STANDARISASI MODAL GLOBAL DASBOR */
     .custom-modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(4px); justify-content: center; align-items: center; }
     .custom-modal.active { display: flex; }

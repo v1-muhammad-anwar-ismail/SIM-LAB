@@ -46,7 +46,7 @@ Route::get('/auth/google/callback', [AuthController::class, 'googleCallback']);
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::post('/auth/google/unlink', [AuthController::class, 'unlinkGoogle'])->name('auth.google.unlink');
+    Route::delete('/auth/google/unlink', [AuthController::class, 'unlinkGoogle'])->name('auth.google.unlink');
     
     // Notification Route
     Route::get('/notifications', [\App\Http\Controllers\NotificationController::class, 'index'])->name('notifications.index');

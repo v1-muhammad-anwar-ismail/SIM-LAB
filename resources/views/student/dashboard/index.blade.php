@@ -362,23 +362,24 @@
     }
     /* Custom Radio Cards untuk Lab */
     .radio-card-grid {
-        display: flex; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem;
+        display: flex; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; align-items: stretch;
     }
-    .radio-card { flex: 0 0 auto; width: calc(25% - 0.75rem); min-width: 150px; position: relative; cursor: pointer; }
+    .radio-card { flex: 0 0 auto; width: calc(25% - 0.75rem); min-width: 150px; position: relative; cursor: pointer; display: flex; }
     @media(max-width: 768px) {
         .radio-card { width: 100%; } /* Mode Full-Width pada layar seluler */
     }
     .radio-card input[type="radio"] { display: none; }
     .radio-card .card-content {
         background: #0a0c10; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; transition: all 0.3s; opacity: 0.5;
+        width: 100%; display: flex; flex-direction: column;
     }
     .radio-card:hover .card-content { opacity: 0.8; border-color: rgba(0, 217, 255, 0.4); }
     .radio-card input[type="radio"]:checked + .card-content {
         border-color: var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 217, 255, 0.3); opacity: 1; transform: translateY(-3px);
     }
-    .radio-card .image-wrapper { width: 100%; padding-bottom: 56.25%; background: #000; position: relative; overflow: hidden; }
+    .radio-card .image-wrapper { width: 100%; padding-bottom: 56.25%; background: #000; position: relative; overflow: hidden; flex-shrink: 0; }
     .radio-card img { position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .radio-card .text-wrapper { padding: 0.75rem; text-align: center; font-size: 0.75rem; font-weight: 700; color: #fff; line-height: 1.3; }
+    .radio-card .text-wrapper { padding: 0.75rem; text-align: center; font-size: 0.75rem; font-weight: 700; color: #fff; line-height: 1.3; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
 
     /* E-Commerce Catalog untuk Alat */
     .alat-wrapper-container { margin-bottom: 2.5rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 0.5rem; }

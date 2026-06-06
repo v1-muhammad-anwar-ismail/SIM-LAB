@@ -4,16 +4,16 @@
 
 <style>
     /* Custom Radio Cards untuk Lab */
-    .radio-card-grid { display: flex; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; }
-    .radio-card { flex: 0 0 auto; width: calc(50% - 0.5rem); position: relative; cursor: pointer; }
+    .radio-card-grid { display: flex; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; align-items: stretch; }
+    .radio-card { flex: 0 0 auto; width: calc(50% - 0.5rem); position: relative; cursor: pointer; display: flex; }
     @media(max-width: 768px) { .radio-card { width: 100%; } }
     .radio-card input[type="radio"] { display: none; }
-    .radio-card .card-content { background: rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; transition: all 0.3s; opacity: 0.6; }
+    .radio-card .card-content { background: rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; transition: all 0.3s; opacity: 0.6; width: 100%; display: flex; flex-direction: column; }
     .radio-card:hover .card-content { opacity: 0.9; border-color: rgba(0, 217, 255, 0.4); }
     .radio-card input[type="radio"]:checked + .card-content { border-color: var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 217, 255, 0.3); opacity: 1; transform: translateY(-3px); }
-    .radio-card .image-wrapper { width: 100%; padding-bottom: 56.25%; background: #000; position: relative; overflow: hidden; }
+    .radio-card .image-wrapper { width: 100%; padding-bottom: 56.25%; background: #000; position: relative; overflow: hidden; flex-shrink: 0; }
     .radio-card img { position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .radio-card .text-wrapper { padding: 0.5rem; text-align: center; font-size: 0.75rem; font-weight: 700; color: #fff; line-height: 1.3; }
+    .radio-card .text-wrapper { padding: 0.5rem; text-align: center; font-size: 0.75rem; font-weight: 700; color: #fff; line-height: 1.3; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
 
     /* Dashboard Metrik Cards */
     .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }

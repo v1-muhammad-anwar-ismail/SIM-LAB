@@ -305,7 +305,7 @@
               @endphp
               <a href="{{ $dashboardRoute }}" class="j-icon-btn" style="border-radius: 50%; overflow: hidden; padding: 2px; border: 2px solid rgba(0,217,255,0.6); box-shadow: 0 0 10px rgba(0,217,255,0.3);" title="Ke Dashboard Pusat ({{ Auth::user()->name }})">
                   @if(Auth::user()->avatar)
-                      <img src="{{ Auth::user()->avatar }}" alt="Avatar" style="width: 36px; height: 36px; object-fit: cover; border-radius: 50%; display: block;">
+                      <img src="{{ str_starts_with(Auth::user()->avatar, 'http') ? Auth::user()->avatar : asset('storage/' . Auth::user()->avatar) }}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0yMCAyMXYtMmE0IDQgMCAwIDAtNC00SDhhNCA0IDAgMCAwLTQgNHYyIj48L3BhdGg+PGNpcmNsZSBjeD0iMTIiIGN5PSI3IiByPSI0Ij48L2NpcmNsZT48L3N2Zz4='" alt="Avatar" style="width: 36px; height: 36px; object-fit: cover; border-radius: 50%; display: block;">
                   @else
                       <div style="width: 36px; height: 36px; background: rgba(0, 217, 255, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00d9ff; font-weight: 800; font-size: 1.1rem; text-transform: uppercase;">
                           {{ substr(Auth::user()->name, 0, 1) }}
